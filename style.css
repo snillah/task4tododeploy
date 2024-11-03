@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.todo-container{
+    /* margin-top: 20px; */
+    margin: 2%;
+    padding: 20px;
+    border-radius:8px;
+    box-shadow:3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+.todo-header{
+    text-align: center;
+}
+.todo-header h1{
+    color: #101fee;
+}
+.todo-header span{
+    color: #188cf8;
+}
+.input-container{
+    margin-top:15px;
+    /* height:px; */
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    justify-content:center;
+    border-radius: 8px;
+    align-items: center;
+}
+.Select-container{
+    width: 500px;
+    padding: 12px;
+    /* background-color: #101fee; */
+    box-shadow:3px 3px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    gap: 2rem;
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Select-container div input,select{
+    padding: 5px;
+    border-radius: 5px;
+    width: 300px;
+}
+.btn{
+    /* width:150px; */
+    background-color: #616bf0;
+    padding: 5px;
+    border-radius: 12px;
+    text-align: center;
+}
+#btn-add{
+    width: 150px;
+}
+.btn:hover{
+    background-color: #1623e7;
+}
+
+/* List - grid view */
+.input-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.view-list{
+    /* background-color: #616bf0; */
+}
+#view-list > li{
+    margin-top:5px;
+    list-style-type: none;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.list-content{
+    display: flex;
+    padding-inline:15px;
+}
+.list-main-content{
+    display: flex;
+    flex-grow: 1;
+    margin-right:15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* other utilities */
+.invisible{
+    display: none;
+}
+.shown{
+    position: absolute;
+    font-size: small;
+    display: block;
+}
+.notify{
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
+}
+
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}

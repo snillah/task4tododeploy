@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="todo-container">
+            <header class="todo-header">
+                <h1>TODO APP</h1>
+                <span>(Income Expense Calculator)</span>
+            </header>
+            <main class="main">
+                <div class="input-container">
+                    <div class="Select-container">
+                        <div class="">
+                            <input id="trans-name" type="text" placeholder="Specify Nature Transaction">
+                            <span class="invisible" id="trans-name-msg"></span>
+                        </div>
+                        <div>
+                            <select id="select-nature" >
+                                <option value="">Select</option>
+                                <option value="1">Income</option>
+                                <option value="0">Expense</option>
+                            </select>
+                            <span class="invisible" id="select-nature-msg"></span>
+                        </div>
+                        <div>
+                            <input type="number" placeholder="Enter Amount" id="amount">
+                            <span class="invisible" id="amount-msg"></span>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Enter Description" id="desc-name">
+                            <span class="invisible" id="desc-name-msg"></span>
+                        </div>
+                        <button class="btn" id="btn-add">Add</button>
+                    </div>
+                    <span class="invisible shown" id="btn-add-msg"></span>
+                </div>
+                <div class="view-conatiner">
+                    <div class="input-filter">
+                        <input type="radio" id="all" name="filter" value="1" checked/><label>ALL</label>
+                        <input type="radio" id="inc" name="filter" value="0" /><label>Income</label>
+                        <input type="radio" id="exp" name="filter" value="0"/><label>Expense</label>
+                    </div>
+                    <ul id="view-list">
+                    </ul>
+                </div>
+            </main>
+
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
