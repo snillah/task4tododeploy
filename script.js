@@ -16,12 +16,32 @@ let transactions =[
     //     desc:""
     // }
 ];
+let incomeValue =0;
+let expenseValue =0;
+let profitValue = 0;
+
+function calculation(){
+    incomeValue = transactions.filter((val)=>val.nature ==="1").reduce((val,arr)=>arr += parseFloat(val.value),0)
+    console.log("Income Value",incomeValue);
+    expenseValue = transactions.filter((val)=>val.nature ==="0").reduce((val,arr)=>arr += parseFloat(val.value),0)
+    console.log("expense value",expenseValue);
+}
+
+
+
+
 
 let btnAdd = document.getElementById('btn-add');
 let viewList =document.getElementById('view-list');
+let incomeSpan = document.getElementById('income-value');
+let expenseSpan = document.getElementById('expense-value');
+let profitSpan = document.getElementById('profit-value');
 
 let updateStatus = false;
 
+incomeSpan.innerText = incomeValue;
+expenseSpan.innerText = expenseValue;
+profitSpan.innerText = profitValue; 
 
 // Input Value
 let tranactionName = document.getElementById('trans-name');
@@ -162,6 +182,7 @@ function fetchData(){
     viewList.innerHTML="";
     transactions.forEach((val,index)=>{
         renderListValue(val,index)   
+        calculation()
     })
 }
 fetchData();
@@ -254,3 +275,4 @@ function filterData(filter){
             }
         }
 }
+
